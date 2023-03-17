@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Bytenamics @Sellular
 
-This is hackathon Website by Bytenamics
+This is hackathon Website by Team Bytenamics
 
 
 ## Available Scripts
