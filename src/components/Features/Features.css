@@ -1,15 +1,25 @@
 .container{
+    margin-top: 30px;
+    background-color: white;
+    display: flex;
+    height: 500px;
+    flex-direction: row;
     padding:4rem;
+    width: 80%;
+   
     /* border:2px solid red; */
     /* margin-top:2rem; */
-    background:linear-gradient(to right,#28313B ,#485461);
+    border-radius: 70px;
+    /* background:linear-gradient(to right,#28313B ,#485461); */
 }
-.row::after{
-    content: "";
-    display: table;
-    clear:both;
+
+.row{
+   display: flex;
+    flex-direction: row;  
 }
+
 .column-66{
+   
     float:left;
     width:67.6777%;
     padding:1rem;
