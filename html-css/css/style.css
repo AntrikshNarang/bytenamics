@@ -1,0 +1,95 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(28, 22, 22);
+    color:white;
+    text-align: center;
+}
+/*Navbar*/
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.4rem;
+    margin-top:15px;
+    height:2.5rem;
+    background-color: rgb(28, 22, 22);
+    padding:1rem;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+.branding a{
+    box-sizing: border-box;
+    font-weight:bolder;
+    color:rgba(44, 187, 99);
+    font-size:2.3rem;
+    margin-left:1rem;
+    text-decoration: none;
+}
+
+.hov:hover{
+    color:white;
+    text-decoration: underline;
+}
+.mid{
+    display: flex;
+    align-items: center;
+}
+.navigation{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navigation li{
+    display:inline-block;
+}
+.nav{
+    color:grey;
+    /* background-color: azure; */
+    font-weight:530;
+    text-decoration: none;
+    margin:2rem;
+    border:0;
+    /* border-radius:100px; */
+    padding:0.2rem 0.7rem;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    text-align:center;
+    transition:all 250ms;
+}
+.nav:hover{
+    box-shadow: 2px 3px 8px rgb(90, 230, 90), 1px 2px 5px rgb(90, 230, 90) inset,-2px -3px 7px rgb(90, 230, 90);
+    color:white;
+    background-color:green;
+    font-size:1.5rem;
+}
+
+.btn{
+    background-color: #c2fbd7;
+    border-radius: 90px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 10px 20px;
+    margin-left:1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.btn:hover{
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+

@@ -1,0 +1,41 @@
+.footer{
+    margin-top:4rem;
+    line-height: 2;
+    background:linear-gradient(to right,#43cea2,#185a9d);
+    width:auto;
+}
+.cimg{
+    position: absolute;
+}
+.maps{
+    text-decoration: none;
+    font-size:1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    color:black;
+}
+.maps:hover{
+    text-decoration: underline;
+    cursor:grab;
+}
+.mail{
+    text-decoration: none;
+    font-size:1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    color:black;
+}
+.mail:hover{
+    text-decoration:underline;
+    cursor:grab;
+}
+.btop{
+    text-decoration:none;
+    font-size:1rem;
+    color:black;
+    font-style:italic;
+}
+.btop:hover{
+    text-decoration:underline;
+    cursor:grab;
+}

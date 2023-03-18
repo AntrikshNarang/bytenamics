@@ -1,0 +1,39 @@
+/*hr*/
+.hr-container{
+    margin-top:20px;
+    padding:50px 0;
+    color:white;
+    background-image: linear-gradient(to right, #594747,#748387);
+}
+.bg{
+    background-size: auto;
+}
+
+.intro-title{
+    /* border:2px solid green; */
+    text-align: center;
+    width:60%;
+    margin:0.2rem auto;
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+.intro-title:hover{
+    text-decoration: underline;
+}
+.intro-text{
+    /* border:2px solid grey; */
+    text-align: center;
+    width:45%;
+    margin:auto;
+    margin-bottom:0.6rem;
+    /* font-family: 'Oswald', sans-serif; */
+    font-size:1rem;
+    font-weight: bold;
+    line-height:2;
+}
+.invert{
+    filter: invert(1);
+}
+.invert:hover{
+    filter: invert(0);
+}
