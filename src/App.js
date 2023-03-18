@@ -5,10 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login-Signup/Login';
 import Signup from './components/Login-Signup/Signup';
 import Events from './components/Events/Events';
+import Feature1 from './components/Features/Feature1';
 
 function App() {
   return (
     <>
+    <div className='main-body'>
       <Router>
         <Navbar/>
         <Routes>
@@ -18,6 +20,8 @@ function App() {
           <Route exact path='/events' element={<Events/>} />
         </Routes>
       </Router>
+      <Feature1></Feature1>
+      </div>
     </>
   );
 }
