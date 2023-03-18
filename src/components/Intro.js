@@ -16,10 +16,10 @@ const Intro = () => {
                         in, aliquid voluptatem deleniti.</p>
                 </div>
                 <div className='button-box'>
-                    
-                        <button type="button" className="btn">Login</button>
-                        <button type="button" className="btn">Signup</button>
-                    
+
+                    <button type="button" className="btn">Login</button>
+                    <button type="button" className="btn">Signup</button>
+
                 </div>
                 <div className='text2'>
                     <p>Bytenamics is made for organizing and executing hackathons linked to a corporate innovation
