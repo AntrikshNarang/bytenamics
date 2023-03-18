@@ -15,19 +15,21 @@
     background: url(../img/background/bg.jpg);
     background-size: cover;
 }
+
 .contact .content{
     max-width: 800px;
     text-align: center;
 }
 .contact .content h2{
-    font-size: 36px;
+    margin-bottom:1rem;
+    font-size: 3rem;
     font-weight: 500;
     color:#fff;
 }
-.contact .content p{
+/* .contact .content p{
     font-weight: 300;
     color:#fff;
-}
+} */
 .container{
     width:100%;
     display:flex;
