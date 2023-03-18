@@ -1,11 +1,14 @@
 .hr-container{
     display: flex;
     flex-direction: column;
-    height: 600px;
+    /* height: 600px; */
     margin-top:20px;
     padding:50px 0;
     color:white;
     background-image: linear-gradient(to right, #594747,#748387);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
 }
 .bg{
     background-size: auto;
@@ -17,7 +20,7 @@
     /* border:2px solid green; */
     text-align: center;
     width:90%;
-    height: 200px;
+    height: auto;
     margin:0.2rem auto;
     font-weight: bolder;
     box-sizing: border-box;
@@ -29,10 +32,10 @@
     /* border:2px solid grey; */
     text-align: center;
     width:75%;
-    height: 200px;
+    height: auto;
     margin:auto;
-    margin-bottom:0.6rem;
-    /* font-family: 'Oswald', sans-serif; */
+    /* margin-bottom:0.6rem; */
+    font-family: 'Oswald', sans-serif;
     font-size:1rem;
     font-weight: bold;
     line-height:2;
@@ -41,29 +44,32 @@
 .button-box{
 display: flex;
 align-items: center;
-margin-left: 500px;
+/* margin-left: 500px; */
+text-align: center;
+justify-content: center;
 width: 50%;
-height: 150px;
+height: auto;
 }
 
 .text2{
     display: flex;
     width: 60%;
-    height: 100px;
-    margin-left: 250px;
+    height: auto;
+    /* margin-left: 250px; */
+    text-align: center;
 }
 .client-logos{
     display: flex;
     width: 95%;
-    height: 400px;
-    flex-direction: row;
+    height: auto;
+    /* flex-direction: column; */
    justify-content: space-around;
 }
 
 
 .invert{
-    display: flex;
-    width: 15%;
+    
+    width: 12%;
     filter: invert(1);
 }
 .invert:hover{
