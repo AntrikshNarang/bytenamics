@@ -7,7 +7,7 @@ const Faq = () => {
 
     return (
         <div className='faq-container' >
-            <h1 class="title">FAQs</h1>
+            <h1 class="faq-title">FAQs</h1>
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
