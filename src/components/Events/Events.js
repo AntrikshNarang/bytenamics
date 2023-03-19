@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Event from './Event';
+import { useNavigate } from 'react-router';
 
-const Events = () => {
+const Events = (props) => {
+  const navigate = useNavigate();
+  if(!props.token){navigate('/login')}
   const initialevents = [
     {
       title: 'Sellular Hackathon',
@@ -174,7 +177,7 @@ const Events = () => {
         {/* {initialevents.map(())} */}
         {MyEvents.map((element, index) => {
           return (
-            <Event key={index} title={element.title} description={element.description} date={element.date} organizername={element.organizername} platform={element.platform} />
+            <Event key={index} showMyEvents={showMyEvents} title={element.title} description={element.description} date={element.date} organizername={element.organizername} platform={element.platform} />
           )
         })}
       </div>

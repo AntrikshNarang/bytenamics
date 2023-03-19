@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Intro.css'
+import { Link } from 'react-router-dom';
 
 
 const Intro = (props) => {
@@ -20,9 +21,9 @@ const Intro = (props) => {
                     <p>{props.text2}</p>
                 </div>
                 {!props.hideButtons && <div className='button-box'>
-
-                    <div><button type="button" className="btn">{props.btn1}</button></div>
-                    <div> <button type="button" className="btn">{props.btn2}</button></div>
+                    {props.token?(<Link type="button" to='/events' className="btn btn-light">Events</Link>)
+                    :(<><div><Link type="button" to='/login' className="btn btn-light">{props.btn1}</Link></div>
+                    <div> <Link type="button" to='/signup' className="ms-2 btn btn-outline-light">{props.btn2}</Link></div></>)}
 
                 </div>}
                 <div className="client_logos">

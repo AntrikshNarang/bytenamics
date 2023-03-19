@@ -11,7 +11,7 @@ const Event = (props) => {
                     </h5>
                     <p style={{ position: 'absolute', right: '10px', top: '10px', backgroundColor: 'green', borderRadius: '10px', fontSize: '10px', color: 'white', padding: '5px' }}>{props.organizername}</p>
                     <p className="card-text">{props.description}</p>
-                    <a href="/" className="btn-sm">Join Before - {props.date}</a><i class="fa-solid fa-trash"></i>
+                    <a href="/" className="btn-sm">Join Before - {props.date}</a> {props.showMyEvents && <i class="fa-solid fa-trash"></i>}
                 </div>
             </div>
         </>
