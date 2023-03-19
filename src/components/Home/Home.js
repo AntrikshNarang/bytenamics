@@ -29,14 +29,14 @@ const Home=()=> {
 
     const intros=[
         {
-            background:"url()",
+            background:"url(https://c4.wallpaperflare.com/wallpaper/806/593/307/low-poly-geometry-digital-art-planetary-rings-wallpaper-preview.jpg)",
             text1:'Join forces with fellow innovators, ignite your creativity, and code your way to a better future.',
             text2:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor harum reprehenderit doloribus perferendis impedit! Quae quisquam non, sunt quia velit eos nesciunt doloremque sapiente errorin, aliquid voluptatem deleniti.',
             btn1:'Login',
             btn2:'Signup'
         },
         {
-          background:"url()",
+          background:"url(https://c4.wallpaperflare.com/wallpaper/455/205/165/fantasy-art-digital-art-artwork-science-fiction-wallpaper-preview.jpg)",
           text2:'Bytenamics is made for organizing and executing hackathons linked to a corporate innovation program.',
           text1:'Sponsers and Partners',
           src1:"https://www.hackerrank.com/wp-content/uploads/2022/10/peloton_black.png",

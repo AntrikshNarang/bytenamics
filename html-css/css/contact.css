@@ -41,24 +41,24 @@
     font-weight: 300;
     color:#fff;
 } */
-.container{
+.container-contact{
     width:100%;
     display:flex;
     justify-content: center;
     align-items: center;
     margin-top:30px;
 }
-.container .contactInfo{
+.container-contact .contactInfo{
     width:50%;
     display:flex;
     flex-direction: column;
 }
-.container .contactInfo .box{
+.container-contact .contactInfo .box{
     position: relative;
     padding:20px 0;
     display: flex;
 }
-.container .contactInfo .box .icon{
+.container-contact .contactInfo .box .icon{
     min-width:60px;
     height:60px;
     background: #fff;
@@ -68,7 +68,7 @@
     border-radius:50%;
     font-size:22px;
 }
-.container .contactInfo .box .text{
+.container-contact .contactInfo .box .text{
     display:flex;
     margin-left:20px;
     font-size:16px;
@@ -76,7 +76,7 @@
     flex-direction: column;
     font-weight: 300;
 }
-.container .contactInfo .box .text h3{
+.container-contact .contactInfo .box .text h3{
     font-weight: 850;
     color: #000000;
 }

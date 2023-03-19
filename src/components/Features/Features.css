@@ -1,6 +1,6 @@
 .container{
     margin-top: 30px;
-    background-color: white;
+    background-color: black;
     display: flex;
     height: 500px;
     flex-direction: row;
@@ -12,6 +12,8 @@
     border-radius: 70px;
     /* background:linear-gradient(to right,#28313B ,#485461); */
 }
+
+
 
 .row{
    display: flex;
@@ -33,6 +35,7 @@
 }
 
 .para{
+    color: whitesmoke;
     line-height: 2;
     font-size:1.4rem;
 }

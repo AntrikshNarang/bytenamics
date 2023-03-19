@@ -1,5 +1,6 @@
 import React from 'react'
-import './contact.css'
+import './contact.css';
+
 
 const Contact=() =>{
   return (
@@ -9,7 +10,7 @@ const Contact=() =>{
             <h2>Contact Us</h2>
             <p>Lorem, ipsum dolor sit amet adipisicing elit. Debitis corporis totam soluta eius ab dolor modi quod fuga illum nobis. Deserunt, earum facilis laborum reiciendis labore assumenda nobis reprehenderit vero ad? Quibusdam.</p>
         </div>
-        <div className="container">
+        <div className="container-contact">
             <div className="contactInfo">
                 <div className="box">
                     <div className="icon"><i className="fa-regular fa-address-book"></i> </div>
