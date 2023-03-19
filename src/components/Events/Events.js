@@ -189,7 +189,7 @@ const Events = (props) => {
 
 
       <div className="container events my-3">
-        <h1>Popular Hackathons</h1>
+        <h1 className='events-title'>Popular Hackathons</h1>
         {/* {initialevents.map(())} */}
         {Events.map((element, index) => {
           return (
