@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { InputForm } from './InputForm'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const Login = (props) => {
   const [ErrorMsg, setErrorMsg] = useState('');
   const [params, setparams] = useState({
     email: '',
@@ -26,6 +26,7 @@ const Login = () => {
       const json = await response.json();
       if(json.success===true){
         localStorage.setItem('token',json.authToken)
+        props.settoken(true);
         navigate('/events');
       }
       else{

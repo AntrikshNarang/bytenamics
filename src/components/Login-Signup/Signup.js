@@ -4,7 +4,7 @@ import { InputForm } from './InputForm';
 import './styles.css'
 
 
-const Signup = () => {
+const Signup = (props) => {
   const [ErrorMsg, setErrorMsg] = useState('');
   const [params, setparams] = useState({
     name: '',
@@ -44,6 +44,7 @@ const Signup = () => {
       console.log(json);
       if (json.success === true) {
         localStorage.setItem('token', json.authToken)
+        props.settoken(true)
         navigate('/events');
       }
       else {

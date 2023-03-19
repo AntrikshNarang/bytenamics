@@ -8,18 +8,20 @@ import Events from './components/Events/Events';
 
 import Home from './components/Home/Home';
 import Contact from './components/contact/Contact';
+import { useState } from 'react';
 
 function App() {
-  return (
+  const [token, settoken] = useState(localStorage.getItem(false));
+    return (
     <>
       <div className='main-body'>
         <Router>
-          <Navbar />
+          <Navbar token={token} settoken={settoken} />
           <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route exact path='/login' element={<Login />} />
-            <Route exact path='/signup' element={<Signup />} />
-            <Route exact path='/events' element={<Events />} />
+            <Route exact path='/' element={<Home token={token}/>} />
+            <Route exact path='/login' element={<Login settoken={settoken} />} />
+            <Route exact path='/signup' element={<Signup settoken={settoken} />} />
+            <Route exact path='/events' element={<Events token={token} />} />
             <Route exact path='/contact' element={<Contact />} />
 
           </Routes>

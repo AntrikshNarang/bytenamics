@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Faq from '../faq/Faq';
 import Feature1 from '../Features/Feature1';
 import Feature2 from '../Features/Feature2';
 import Feature3 from '../Features/Feature3';
@@ -6,9 +7,10 @@ import Feature4 from '../Features/Feature4';
 import Feature5 from '../Features/Feature5';
 import Feature6 from '../Features/Feature6';
 import Intro from '../Intro';
+import Reveiws from '../reveiws/Reviews';
 import Slider from '../Slider/Slider';
 
-const Home=()=> {
+const Home=(props)=> {
 
   const[intro1,setIntro1]=useState('true')
   const[intro2,setIntro2]=useState('')
@@ -53,7 +55,7 @@ const Home=()=> {
   return (
     <>
     <div>
-        {intro1 && <Intro background={intros[0].background} text1={intros[0].text1} text2={intros[0].text2} btn1={intros[0].btn1} btn2={intros[0].btn2}></Intro>}
+        {intro1 && <Intro background={intros[0].background} text1={intros[0].text1} text2={intros[0].text2} btn1={intros[0].btn1} btn2={intros[0].btn2} token={props.token}></Intro>}
 
         {intro2 && <Intro background={intros[1].background} text1={intros[1].text1}  src1={intros[1].src1} src2={intros[1].src2} src3={intros[1].src3} src4={intros[1].src4} src5={intros[1].src5} src6={intros[1].src6} src7={intros[1].src7} src8={intros[1].src8} hideButtons></Intro>}
 
@@ -65,6 +67,8 @@ const Home=()=> {
       <Feature4></Feature4>
       <Feature5></Feature5>
       <Feature6></Feature6>
+      <Reveiws></Reveiws>
+      <Faq></Faq>
       </div>
     </div>
     </>
