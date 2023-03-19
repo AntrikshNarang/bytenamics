@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Event from './Event';
 import { useNavigate } from 'react-router';
 
 const Events = (props) => {
   const navigate = useNavigate();
-  if(!props.token){navigate('/login')}
+  // if (!props.token) { navigate('/login') }
   const initialevents = [
     {
       title: 'Sellular Hackathon',
@@ -63,11 +63,13 @@ const Events = (props) => {
       platform: 'Offline'
     }
   ];
-  const [Events, setEvents] = useState(initialevents); 
+  const [Events, setEvents] = useState(initialevents);
   const [ErrorMsg, setErrorMsg] = useState('');
+  const [User, setUser] = useState('')
   const [Name, setName] = useState('')
   const [showMyEvents, setshowMyEvents] = useState(false);
   const [MyEvents, setMyEvents] = useState([]);
+  const [Participants, setParticipants] = useState([])
   const [Params, setParams] = useState({
     title: '',
     description: '',
@@ -75,31 +77,29 @@ const Events = (props) => {
     date: '',
   });
   const [isAdmin, setisAdmin] = useState(false);
-  const handleSubmit = async(e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     Params.date = document.getElementById('dateField').value;
-    if(!Params.title || !Params.description || !Params.date){
+    if (!Params.title || !Params.description || !Params.date) {
       setErrorMsg('Please fill all the fields');
-      console.log('Fill all the Fields')
       return;
     }
     setErrorMsg('');
-    console.log((Params.date));
-    Params.platform = (document.getElementById('exampleCheck1').checked)?('Offline'):('Online');
-    const response = await fetch('http://localhost:5000/hackathons/add',{
-      method:'POST',
-      headers:{
+    Params.platform = (document.getElementById('exampleCheck1').checked) ? ('Offline') : ('Online');
+    const response = await fetch('http://localhost:5000/hackathons/add', {
+      method: 'POST',
+      headers: {
         'Content-Type': 'application/json',
         'auth-token': localStorage.getItem('token')
       },
-      body: JSON.stringify({title:Params.title,description: Params.description,platform: Params.platform,date:Params.date.toString()})
+      body: JSON.stringify({ title: Params.title, description: Params.description, platform: Params.platform, date: Params.date.toString() })
     })
     const json = await response.json();
     console.log(json)
     getEvents();
   }
   const getEvents = async () => {
-    const response = await fetch('http://localhost:5000/hackathons/fetch',{
+    const response = await fetch('http://localhost:5000/hackathons/fetch', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const Events = (props) => {
       },
     })
     const json = await response.json();
-    setEvents(json.map((element)=>{return {...element,date:element.date.slice(0,10)}}));
+    setEvents(json.map((element) => { return { ...element, date: element.date.slice(0, 10) } }));
   }
   useEffect(() => {
     getUser();
@@ -115,7 +115,7 @@ const Events = (props) => {
   }, [])
 
   const getUser = async () => {
-    const response = await fetch('http://localhost:5000/auth/user/getuser',{
+    const response = await fetch('http://localhost:5000/auth/user/getuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -123,13 +123,14 @@ const Events = (props) => {
       },
     })
     const json = await response.json();
-    setisAdmin((json.role==='admin')?(true):(false));
+    setUser(json);
+    setisAdmin((json.role === 'admin') ? (true) : (false));
     setName(json.name);
   }
   const showMyHackathons = async (e) => {
     e.preventDefault();
     setshowMyEvents(!showMyEvents);
-    const response = await fetch('http://localhost:5000/hackathons/myhackathons',{
+    const response = await fetch('http://localhost:5000/hackathons/myhackathons', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -138,49 +139,52 @@ const Events = (props) => {
     })
 
     const json = await response.json();
-    setMyEvents(json.map((element)=>{return {...element,date:element.date.slice(0,10)}}));
+    setMyEvents(json.map((element) => { return { ...element, date: element.date.slice(0, 10) } }));
   }
-
+  const ref = useRef(null);
+  const openModal = () => {
+   ref.current.click();
+  }
   return (
     <>
       {isAdmin &&
-      (<div className="container events my-5" style={{ padding: '30px', borderRadius: '25px' }}>
-        <h2>Add an Event - {Name}</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Enter Hackathon Title</label>
-            <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
-            onChange={(e)=>{setParams((prev)=>({...prev,title:e.target.value}))}}  />
-            <div id="emailHelp" className="form-text">The Hackathon Name should be short and specific</div>
-          </div>
-          <div className="form-floating mb-3">
-            <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: "100px" }} 
-            onChange={(e)=>{setParams((prev)=>({...prev,description:e.target.value}))}} ></textarea>
-            <label htmlFor="floatingTextarea2">Hackathon Description</label>
-          </div>
-          <div className="mb-3 form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">Is the Event Offline?</label>
-          </div>
-          <div className='mb-3'>
-            <input type="date" name="" id="dateField" />
-          </div>
-          {ErrorMsg && <p className="ErrorMsg">{ErrorMsg}</p> }
-          <button type="submit" className="btn btn-primary">Submit</button>
-          <a href="" className="mx-2" onClick={showMyHackathons}>See My Events</a>
-        </form>
-      </div>
-      )}
+        (<div className="container events my-5" style={{ padding: '30px', borderRadius: '25px' }}>
+          <h2>Add an Event - {Name}</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">Enter Hackathon Title</label>
+              <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                onChange={(e) => { setParams((prev) => ({ ...prev, title: e.target.value })) }} />
+              <div id="emailHelp" className="form-text">The Hackathon Name should be short and specific</div>
+            </div>
+            <div className="form-floating mb-3">
+              <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style={{ height: "100px" }}
+                onChange={(e) => { setParams((prev) => ({ ...prev, description: e.target.value })) }} ></textarea>
+              <label htmlFor="floatingTextarea2">Hackathon Description</label>
+            </div>
+            <div className="mb-3 form-check">
+              <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+              <label className="form-check-label" htmlFor="exampleCheck1">Is the Event Offline?</label>
+            </div>
+            <div className='mb-3'>
+              <input type="date" name="" id="dateField" />
+            </div>
+            {ErrorMsg && <p className="ErrorMsg">{ErrorMsg}</p>}
+            <button type="submit" className="btn btn-primary">Submit</button>
+            <a href="" className="mx-2" onClick={showMyHackathons}>See My Events</a>
+          </form>
+        </div>
+        )}
       {showMyEvents && (
         <div className="container events my-3">
-        <h1>My Hackathons</h1>
-        {/* {initialevents.map(())} */}
-        {MyEvents.map((element, index) => {
-          return (
-            <Event key={index} showMyEvents={showMyEvents} title={element.title} description={element.description} date={element.date} organizername={element.organizername} platform={element.platform} />
-          )
-        })}
-      </div>
+          <h1>My Hackathons</h1>
+          {/* {initialevents.map(())} */}
+          {MyEvents.map((element, index) => {
+            return (
+              <Event key={index} showMyEvents={showMyEvents} title={element.title} description={element.description} date={element.date} organizername={element.organizername} platform={element.platform} hackathonid={element._id} MyEvents={MyEvents} setMyEvents={setMyEvents} Events={Events} setEvents={setEvents} openModal={openModal} Participants={Participants} setParticipants={setParticipants} />
+            )
+          })}
+        </div>
       )}
 
 
@@ -189,9 +193,37 @@ const Events = (props) => {
         {/* {initialevents.map(())} */}
         {Events.map((element, index) => {
           return (
-            <Event key={index} title={element.title} description={element.description} date={element.date} organizername={element.organizername} platform={element.platform} />
+            <Event key={index} title={element.title} description={element.description} date={element.date} organizername={element.organizername} platform={element.platform} User={User} hackathonid={element._id} ref={ref}/>
           )
         })}
+      </div>
+
+
+
+      <button type="button" class="btn btn-primary" ref={ref} data-bs-toggle="modal" data-bs-target="#exampleModal" style={{display:'none'}}>
+        Launch demo modal
+      </button>
+      {/* Modal Pop-Up */}
+      <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <p style={{fontWeight:'Bolder'}}>Name - Email</p>
+              {Participants.map((element,index)=>{
+                return(
+                  <p key={index}>{element.name} - {element.email}</p>
+                )
+              })}
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )

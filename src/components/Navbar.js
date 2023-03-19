@@ -24,9 +24,9 @@ const Navbar = (props) => {
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                         </li>
-                        {props.token && (<li className="nav-item">
+                        <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/events">Events</Link>
-                        </li>)}
+                        </li>
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/">About Us</Link>
                         </li>
