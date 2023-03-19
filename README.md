@@ -1,71 +1,29 @@
-# Bytenamics @Sellular
+BYTENAMICS:
 
-This is hackathon Website by Team Bytenamics
+An event management web application made for Sellular Hackathon 2023 by Bytenamics. The application allows users to login as either an admin or a user. Admins can add or delete events and view a list of all participants, while users can join events. The homepage features information on the app's key features, along with reviews and an FAQ section. The application also includes an about us page that provides information about the Bytenamics team, and a contact us page. The app also includes many attractive animated gifs to enhance the user experience.
 
 
-## Available Scripts
 
-In the project directory, you can run:
+Usage
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Logging In:
+Users can login as either an admin or a user.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Admin Login:
+To login as an admin, navigate to http://localhost:3000/admin and enter the admin username and password.
 
-### `npm test`
+User Login:
+To login as a user, navigate to http://localhost:3000/login and enter a valid username and password.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Events:
+After logging in, admins can add or delete events and view a list of all participants. Users can view events and join them.
 
-### `npm run build`
+Homepage:
+The homepage features information on the app's key features, along with reviews and an FAQ section. Many attractive animated gifs have been included to enhance the user experience.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+About Us:
+The About Us page provides information about the Bytenamics team.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contact Us:
+The Contact Us page allows users to contact the Bytenamics team with any questions or feedback.
