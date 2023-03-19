@@ -1,0 +1,19 @@
+.faq-container{
+    /* width: 80%;
+    margin-left: 10%;
+    align-items: center;
+    display: flex; */
+    background-color: black;
+    margin-top: 100px;
+}
+
+.accordion{
+    width: 80%;
+    margin-left: 10%;
+    background-color: black;
+}
+
+.title{
+    color: green;
+    margin-left: 20px;
+}

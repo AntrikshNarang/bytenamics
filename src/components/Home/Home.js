@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Faq from '../faq/Faq';
 import Feature1 from '../Features/Feature1';
 import Feature2 from '../Features/Feature2';
 import Feature3 from '../Features/Feature3';
@@ -67,6 +68,7 @@ const Home=()=> {
       <Feature5></Feature5>
       <Feature6></Feature6>
       <Reveiws></Reveiws>
+      <Faq></Faq>
       </div>
     </div>
     </>
