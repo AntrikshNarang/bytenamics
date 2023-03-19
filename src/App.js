@@ -9,6 +9,7 @@ import Events from './components/Events/Events';
 import Home from './components/Home/Home';
 import Contact from './components/contact/Contact';
 import { useState } from 'react';
+import About from './components/about/About';
 
 function App() {
   const [token, settoken] = useState(localStorage.getItem(false));
@@ -23,6 +24,7 @@ function App() {
             <Route exact path='/signup' element={<Signup settoken={settoken} />} />
             <Route exact path='/events' element={<Events token={token} />} />
             <Route exact path='/contact' element={<Contact />} />
+            <Route exact path='/about' element={<About />} />
 
           </Routes>
         </Router>

@@ -28,7 +28,7 @@ const Navbar = (props) => {
                             <Link className="nav-link active" aria-current="page" to="/events">Events</Link>
                         </li>)}
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/">About Us</Link>
+                            <Link className="nav-link active" aria-current="page" to="/about">About Us</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/contact">Contact Us</Link>
