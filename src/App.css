@@ -1,3 +1,8 @@
 .main-body{
     background-color: black;
 }
+.features-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

@@ -1,0 +1,41 @@
+.container{
+    margin-top: 30px;
+    background-color: black;
+    display: flex;
+    height: 500px;
+    flex-direction: row;
+    padding:4rem;
+    width: 80%;
+   
+    /* border:2px solid red; */
+    /* margin-top:2rem; */
+    border-radius: 70px;
+    /* background:linear-gradient(to right,#28313B ,#485461); */
+}
+
+
+
+.row{
+   display: flex;
+    flex-direction: row;  
+}
+
+.column-66{
+   
+    float:left;
+    width:67.6777%;
+    padding:1rem;
+}
+.column-33{
+    float:left;
+}
+.head{
+    font-size:3rem;
+    color:rgba(31, 226, 31, 0.879);
+}
+
+.para{
+    color: whitesmoke;
+    line-height: 2;
+    font-size:1.4rem;
+}
