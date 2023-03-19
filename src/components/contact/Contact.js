@@ -1,14 +1,14 @@
 import React from 'react'
 import './contact.css';
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 const Contact=() =>{
   return (
     <div>
-       <section className="contact">
+        <section className="contact">
         <div className="content">
             <h2>Contact Us</h2>
-            <p>Lorem, ipsum dolor sit amet adipisicing elit. Debitis corporis totam soluta eius ab dolor modi quod fuga illum nobis. Deserunt, earum facilis laborum reiciendis labore assumenda nobis reprehenderit vero ad? Quibusdam.</p>
+           
         </div>
         <div className="container-contact">
             <div className="contactInfo">
@@ -33,6 +33,9 @@ const Contact=() =>{
                         <p><a href="mailto:example@gmail.com"></a> example@gmail.com</p>
                     </div>
                 </div>
+            </div>
+            <div className="embedmaps">
+                <iframe classNameName='map-image' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.4652608509655!2d76.63822341460433!3d12.284423291309327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf65ebb4607601%3A0x5c186c9c000bf3fa!2sNIE%20Boys%20hostel!5e0!3m2!1sen!2sin!4v1679157930762!5m2!1sen!2sin" ></iframe>
             </div>
         </div>
     </section>

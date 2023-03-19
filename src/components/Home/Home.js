@@ -6,6 +6,7 @@ import Feature4 from '../Features/Feature4';
 import Feature5 from '../Features/Feature5';
 import Feature6 from '../Features/Feature6';
 import Intro from '../Intro';
+import Reveiws from '../reveiws/Reviews';
 import Slider from '../Slider/Slider';
 
 const Home=()=> {
@@ -65,6 +66,7 @@ const Home=()=> {
       <Feature4></Feature4>
       <Feature5></Feature5>
       <Feature6></Feature6>
+      <Reveiws></Reveiws>
       </div>
     </div>
     </>

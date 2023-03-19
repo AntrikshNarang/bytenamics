@@ -1,0 +1,32 @@
+.reviews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.card{
+    /* margin-left:4rem; */
+    display: flex;
+}
+.card-img-top{
+    width:50%;
+    height: 50%;
+    margin:0.5rem auto 0.5rem auto;
+}
+.card-text{
+    line-height: 1.5;
+}
+
+.head{
+    display: flex;
+}
+
+.testimonial-heading{
+    display: flex;
+}
+
+.testimonial-container{
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
