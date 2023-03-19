@@ -110,6 +110,7 @@ const Events = () => {
     getUser();
     getEvents();
   }, [])
+
   const getUser = async () => {
     const response = await fetch('http://localhost:5000/auth/user/getuser',{
       method: 'POST',
@@ -120,7 +121,7 @@ const Events = () => {
     })
     const json = await response.json();
     setisAdmin((json.role==='admin')?(true):(false));
-    setName(json.name)
+    setName(json.name);
   }
   const showMyHackathons = async (e) => {
     e.preventDefault();
@@ -132,14 +133,15 @@ const Events = () => {
         'auth-token': localStorage.getItem('token')
       },
     })
+
     const json = await response.json();
-    setMyEvents(json);
+    setMyEvents(json.map((element)=>{return {...element,date:element.date.slice(0,10)}}));
   }
 
   return (
     <>
       {isAdmin &&
-      (<div className="container my-5" style={{ backgroundColor: '#f0f0f0', padding: '30px', borderRadius: '25px' }}>
+      (<div className="container events my-5" style={{ padding: '30px', borderRadius: '25px' }}>
         <h2>Add an Event - {Name}</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -167,7 +169,7 @@ const Events = () => {
       </div>
       )}
       {showMyEvents && (
-        <div className="container my-3">
+        <div className="container events my-3">
         <h1>My Hackathons</h1>
         {/* {initialevents.map(())} */}
         {MyEvents.map((element, index) => {
@@ -179,7 +181,7 @@ const Events = () => {
       )}
 
 
-      <div className="container my-3">
+      <div className="container events my-3">
         <h1>Popular Hackathons</h1>
         {/* {initialevents.map(())} */}
         {Events.map((element, index) => {
