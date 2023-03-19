@@ -86,7 +86,7 @@ const Events = (props) => {
     }
     setErrorMsg('');
     Params.platform = (document.getElementById('exampleCheck1').checked) ? ('Offline') : ('Online');
-    const response = await fetch('http://localhost:5000/hackathons/add', {
+    const response = await fetch('https://bytenamics-backend.onrender.com/hackathons/add', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const Events = (props) => {
     getEvents();
   }
   const getEvents = async () => {
-    const response = await fetch('http://localhost:5000/hackathons/fetch', {
+    const response = await fetch('https://bytenamics-backend.onrender.com/hackathons/fetch', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ const Events = (props) => {
   }, [])
 
   const getUser = async () => {
-    const response = await fetch('http://localhost:5000/auth/user/getuser', {
+    const response = await fetch('https://bytenamics-backend.onrender.com/auth/user/getuser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ const Events = (props) => {
   const showMyHackathons = async (e) => {
     e.preventDefault();
     setshowMyEvents(!showMyEvents);
-    const response = await fetch('http://localhost:5000/hackathons/myhackathons', {
+    const response = await fetch('https://bytenamics-backend.onrender.com/hackathons/myhackathons', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -4,7 +4,7 @@ import './events.css'
 const Event = (props) => {
     const [ResMsg, setResMsg] = useState('')
     const handleDelete = async (id) => {
-        const response = await fetch(`http://localhost:5000/hackathons/delete/${id}`, {
+        const response = await fetch(`https://bytenamics-backend.onrender.com/hackathons/delete/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const Event = (props) => {
             setResMsg('Please login first');
             return;
         }
-        const response = await fetch(`http://localhost:5000/participants/join`, {
+        const response = await fetch(`https://bytenamics-backend.onrender.com/participants/join`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const Event = (props) => {
         setResMsg((json.success) ? (json.message) : ('Could not Register User'))
     }
     const showParticipants = async (id) => {
-        const response = await fetch(`http://localhost:5000/participants/get/${id}`, {
+        const response = await fetch(`https://bytenamics-backend.onrender.com/participants/get/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

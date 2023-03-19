@@ -33,7 +33,7 @@ const Signup = (props) => {
     }
     setErrorMsg('');
     try {
-      const response = await fetch(`http://localhost:5000/auth/user/createuser`, {
+      const response = await fetch(`https://bytenamics-backend.onrender.com/auth/user/createuser`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

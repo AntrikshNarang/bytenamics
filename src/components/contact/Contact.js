@@ -33,9 +33,10 @@ const Contact=() =>{
                     <div className="icon"><i className="fa-regular fa-envelope"></i></div>
                     <div className="text">
                         <h3>Email</h3>
-                        <p><a href="mailto:example@gmail.com"></a> 2021is_jaskaransingh_a@nie.ac.in
+                        <p><a href="mailto:itsantriksh@gmail.com">itsantriksh@nie.ac.in</a> 
+                        2021is_jaskaransingh_a@nie.ac.in
                         2021cs_aryanmandla_a@nie.ac.in
-                        2021cs_antrikshnarang_a@nie.ac.in</p>
+                        </p>
                     </div>
                 </div>
             </div>
