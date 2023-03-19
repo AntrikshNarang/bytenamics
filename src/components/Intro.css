@@ -1,17 +1,18 @@
 .hr-container{
+    /* background: url("https://www.trainingconcepts.com/wp-content/uploads/2021/02/AdobeStock_204527293-scaled.jpeg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     display: flex;
     flex-direction: column;
-    /* height: 600px; */
+    height: 600px;
     margin-top:20px;
     padding:50px 0;
     color:white;
-    background-image: linear-gradient(to right, #594747,#748387);
+    /* background-image: linear-gradient(to right, #594747,#748387); */
     justify-content: space-evenly;
     align-items: center;
     gap: 30px;
-}
-.bg{
-    background-size: auto;
 }
 
 
@@ -58,18 +59,19 @@ height: auto;
     /* margin-left: 250px; */
     text-align: center;
 }
-.client-logos{
+.client_logos{
     display: flex;
     width: 95%;
     height: auto;
-    /* flex-direction: column; */
+    width: 500px;
+    flex-direction: row;
    justify-content: space-around;
 }
 
 
 .invert{
-    
-    width: 12%;
+    width: calc(25% - 10px);
+    /* width: 25%; */
     filter: invert(1);
 }
 .invert:hover{
