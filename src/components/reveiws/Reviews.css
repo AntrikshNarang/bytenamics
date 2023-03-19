@@ -6,6 +6,7 @@
 .card{
     /* margin-left:4rem; */
     display: flex;
+    background-color:#28282e;
 }
 .card-img-top{
     width:50%;
@@ -14,6 +15,7 @@
 }
 .card-text{
     line-height: 1.5;
+    color: white;
 }
 
 .head{

@@ -1,5 +1,9 @@
 import React from 'react'
 import './Reviews.css'
+import img1 from '../Images/reviewImages/ayush_garg.jpeg'
+import img2 from '../Images/reviewImages/sabhi.jpeg'
+import img3 from '../Images/reviewImages/ksithij.jpeg'
+import img4 from '../Images/reviewImages/arush.jpeg'
 
 const Reveiws = () => {
     return (
@@ -8,7 +12,7 @@ const Reveiws = () => {
 
             <div className="reviews">
                 <div className="card" style={{ width: '22%' }}>
-                    <img src="../img/cards/c2.gif" className="card-img-top" alt="..." width="335" height="471" />
+                    <img src={img1} className="card-img-top" alt="..." width="335" height="471" />
                     <div className="card-body">
                         <p className="card-text">"The hackathon website was fantastic! The layout was clean and easy to navigate,
                             and the information provided was comprehensive and helpful. The registration process was smooth, and
@@ -16,7 +20,7 @@ const Reveiws = () => {
                     </div>
                 </div>
                 <div className="card" style={{ width: '22%' }}>
-                    <img src="../img/cards/c3.gif" className="card-img-top" alt="..." width="335" height="471" />
+                    <img src= {img2} className="card-img-top" alt="..." width="335" height="471" />
                     <div className="card-body">
                         <p className="card-text">"I loved the hackathon website! It had a great design and was very user-friendly.
                             The resources and tools provided were incredibly helpful, and the FAQ section was well-written and
@@ -25,7 +29,7 @@ const Reveiws = () => {
                     </div>
                 </div>
                 <div className="card" style={{ width: '22%' }}>
-                    <img src="../img/cards/c2.gif" className="card-img-top" alt="..." width="335" height="471" />
+                    <img src={img3} className="card-img-top" alt="..." width="335" height="471" />
                     <div className="card-body">
                         <p className="card-text">"The hackathon website was a bit confusing to navigate at first, but once I got the
                             hang of it, I found it to be a great resource. The event schedule was well-organized, and the
@@ -34,7 +38,7 @@ const Reveiws = () => {
                     </div>
                 </div>
                 <div className="card" style={{ width: '22%' }}>
-                    <img src="../img/cards/c3.gif" className="card-img-top" alt="..." width="335" height="471" />
+                    <img src={img4} className="card-img-top" alt="..." width="335" height="471" />
                     <div className="card-body">
                         <p className="card-text">"I had a great time participating in the hackathon, and the website played a big
                             part in that. The layout was easy to navigate, and the information provided was comprehensive and

@@ -23,14 +23,19 @@ const Contact=() =>{
                     <div className="icon"><i className="fa fa-phone" aria-hidden="true"></i></div>
                     <div className="text">
                         <h3>Phone</h3>
-                        <p>507-475-6094</p>
+                        <p>7006274849,
+                            6005651754,
+                            7051450844
+                        </p>
                     </div>
                 </div>
                 <div className="box">
                     <div className="icon"><i className="fa-regular fa-envelope"></i></div>
                     <div className="text">
                         <h3>Email</h3>
-                        <p><a href="mailto:example@gmail.com"></a> example@gmail.com</p>
+                        <p><a href="mailto:example@gmail.com"></a> 2021is_jaskaransingh_a@nie.ac.in
+                        2021cs_aryanmandla_a@nie.ac.in
+                        2021cs_antrikshnarang_a@nie.ac.in</p>
                     </div>
                 </div>
             </div>
