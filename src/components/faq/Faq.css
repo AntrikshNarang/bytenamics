@@ -17,3 +17,13 @@
     color: green;
     margin-left: 20px;
 }
+
+.accordion-item, .accordion, .accordion-header , .accordion-button{
+    background-color: #28282e;
+    color: white;
+    
+}
+
+.accordion-header{
+    background-color: grey;
+}
