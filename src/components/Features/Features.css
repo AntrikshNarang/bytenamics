@@ -10,10 +10,14 @@
     /* border:2px solid red; */
     /* margin-top:2rem; */
     border-radius: 70px;
+    gap: 50px;
     /* background:linear-gradient(to right,#28313B ,#485461); */
 }
 
-
+ .intro-image{
+    margin-bottom: 200px;
+    border-radius: 10px;
+}
 
 .row{
    display: flex;
@@ -28,6 +32,8 @@
 }
 .column-33{
     float:left;
+    border-radius: 10px;
+    
 }
 .head{
     font-size:3rem;

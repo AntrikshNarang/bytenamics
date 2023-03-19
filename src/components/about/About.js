@@ -24,8 +24,8 @@ const About = () => {
                         <div className="cont">
                             <h2>Jaskaran Singh</h2>
                             <p className="title">Web Developer</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus ea eligendi.</p>
-                            <p>@example.com</p>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus ea eligendi.</p> */}
+                            <p>2021is_jaskaransingh_a@nie.ac.in</p>
                             <p><a href="https://www.facebook.com" target="_blank" className="fa1 fa1-facebook fa fa-facebook"></a> | <a href="https://www.instagram.com" target="_blank" className="fa1 fa1-instagram fa fa-instagram"></a> | <a href="https://www.twitter.com" target="_blank" className="fa1 fa1-twitter fa fa-twitter"></a> </p>
                         </div>
                     </div>
@@ -38,8 +38,8 @@ const About = () => {
                         <div className="cont">
                             <h2>Antriksh Narang</h2>
                             <p className="title">Web Developer</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus ea eligendi.</p>
-                            <p>@example.com</p>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus ea eligendi.</p> */}
+                            <p>itsantriksh@gmail.com</p>
                             <p><a href="https://www.facebook.com" target="_blank" className="fa1 fa1-facebook fa fa-facebook"></a> | <a href="https://www.instagram.com" target="_blank" className="fa1 fa1-instagram fa fa-instagram"></a> | <a href="https://www.twitter.com" target="_blank" className="fa1 fa1-twitter fa fa-twitter"></a> </p>
                         </div>
                     </div>
@@ -52,8 +52,8 @@ const About = () => {
                         <div className="cont">
                             <h2>Aryan Mandla</h2>
                             <p className="title">Web Developer</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus ea eligendi.</p>
-                            <p>@example.com</p>
+                            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum possimus ea eligendi.</p> */}
+                            <p>aryan.mandla.03@gmail.com</p>
                             <p><a href="https://www.facebook.com" target="_blank" className="fa1 fa1-facebook fa fa-facebook"></a> | <a href="https://www.instagram.com" target="_blank" className="fa1 fa1-instagram fa fa-instagram"></a> | <a href="https://www.twitter.com" target="_blank" className="fa1 fa1-twitter fa fa-twitter"></a> </p>
                         </div>
                     </div>

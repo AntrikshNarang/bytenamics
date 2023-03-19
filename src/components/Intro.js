@@ -14,8 +14,14 @@ const Intro = (props) => {
         <>
             <div className="hr-container " style={{ backgroundImage: props.background }}>
 
+                
+
                 <div className="intro-content">
                     <h1 className="intro-title">{props.text1}</h1>
+                </div>
+                <div className='intro-text'>
+                    <p>{props.text3}</p>
+
                 </div>
                 <div className="intro-text">
                     <p>{props.text2}</p>
