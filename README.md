@@ -1,29 +1,38 @@
-BYTENAMICS:
+# Bytenamics
 
-An event management web application made for Sellular Hackathon 2023 by Bytenamics. The application allows users to login as either an admin or a user. Admins can add or delete events and view a list of all participants, while users can join events. The homepage features information on the app's key features, along with reviews and an FAQ section. The application also includes an about us page that provides information about the Bytenamics team, and a contact us page. The app also includes many attractive animated gifs to enhance the user experience.
+Bytenamics is an event management web application that allows users to find and join hackathons hosted by different companies or organizers. It also enables admins to create and manage their own hackathons using a graphical user interface. Bytenamics was developed by a team of three developers for the Sellular Hackathon 2023.
 
+## Features
 
+### Authentication
+- Users can sign up and log in to the application securely.
+- Passwords are hashed and stored in the database for better security using bcrypt.js.
+- Input validation is also done using Express Validator.
 
-Usage
+### User Management
+- Users can browse all upcoming events hosted by different companies/organizers and join them to practice their skills.
+- Admins can create, delete, and manage events through a graphical user interface (GUI).
+- Admins can also see a list of users who have joined their hackathon, including their names and emails.
 
+### Frontend
+- Homepage includes information about the app's key features, along with reviews and an FAQ section.
+- Navbar component is common for all pages.
+- Events page lists all upcoming hackathons, and admins can create new ones using the GUI interface.
+- Contact us page allows users to get in touch with the developers of the website.
+- About us page provides information about the Bytenamics team.
 
-Logging In:
-Users can login as either an admin or a user.
+### Backend
+- Built using Node.js and Express.js
+- MongoDB is used as the database.
+- JSON Web Token (JWT) is used for authentication and authorization.
+- RESTful API design.
+- User passwords are hashed using bcrypt.js for better security.
+- Input validation is done using Express Validator.
+- Events can be created, read, updated, and deleted (CRUD operations) using the API.
 
-Admin Login:
-To login as an admin, navigate to http://localhost:3000/admin and enter the admin username and password.
+### Deployment
+- Bytenamics is deployed on Netlify. 
 
-User Login:
-To login as a user, navigate to http://localhost:3000/login and enter a valid username and password.
+## Conclusion
 
-Events:
-After logging in, admins can add or delete events and view a list of all participants. Users can view events and join them.
-
-Homepage:
-The homepage features information on the app's key features, along with reviews and an FAQ section. Many attractive animated gifs have been included to enhance the user experience.
-
-About Us:
-The About Us page provides information about the Bytenamics team.
-
-Contact Us:
-The Contact Us page allows users to contact the Bytenamics team with any questions or feedback.
+Bytenamics is a comprehensive hackathon management solution that offers a secure login system, event management, and user management. The app is designed to be user-friendly, with a clear and intuitive interface. With its robust security measures, Bytenamics is a reliable choice for anyone looking to host or participate in a hackathon.
