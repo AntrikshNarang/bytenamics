@@ -31,7 +31,8 @@ Bytenamics is an event management web application that allows users to find and 
 - Events can be created, read, updated, and deleted (CRUD operations) using the API.
 
 ### Deployment
-- Bytenamics is deployed on Netlify. 
+- Bytenamics is deployed on Netlify.
+- Backend Repo Link : https://github.com/AntrikshNarang/bytenamics-backend
 
 ## Conclusion
 
